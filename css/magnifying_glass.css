@@ -1,0 +1,437 @@
+@charset "UTF-8";
+.clearfix:after {
+  content: '\20';
+  clear: both;
+  display: block;
+  height: 0;
+}
+
+.a-all {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body {
+  background: white;
+}
+
+/* 头部 */
+.header {
+  background: #f5f5f5;
+  width: 100%;
+  height: 35px;
+  z-index: 999;
+  border-bottom: 1px solid #eee;
+}
+.header .headerW {
+  margin: 0 auto;
+  width: 1190px;
+  height: 35px;
+}
+.header .headerW .headerleft {
+  float: left;
+}
+.header .headerW .headerleft li {
+  float: left;
+}
+.header .headerW .headerleft a {
+  line-height: 35px;
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 7px 0 0;
+}
+.header .headerW .headerleft .login {
+  color: #f22e00;
+}
+.header .headerW .headerleft .ahov {
+  color: #666666;
+}
+.header .headerW .headerleft .ahov:hover {
+  color: #F40;
+}
+.header .headerW .headerleft .phonet {
+  margin-left: 10px;
+}
+.header .headerW .headerright {
+  float: right;
+}
+.header .headerW .headerright li {
+  float: left;
+  line-height: 35px;
+}
+.header .headerW .headerright li:hover .header-mytaobao {
+  padding: 0px 5px 0px 5px;
+  border-right: 1px solid #EEE;
+  border-left: 1px solid #EEE;
+  background: #ffffff;
+}
+.header .headerW .headerright li:hover .header-mytaobao-down {
+  display: block;
+}
+.header .headerW .headerright li .header-mytaobao {
+  padding: 0px 6px 0px 6px;
+  height: 35px;
+  z-index: 999;
+  position: relative;
+}
+.header .headerW .headerright li .header-cart .site-nav-icon-highlight {
+  margin: 0 5px;
+}
+.header .headerW .headerright .nav-up:hover a {
+  color: #F40;
+}
+.header .headerW .headerright .nav-up:hover span {
+  color: #F40;
+  cursor: pointer;
+}
+.header .headerW .headerright .nav-up a {
+  color: #666666;
+  font-size: 12px;
+  display: block;
+  float: left;
+}
+.header .headerW .headerright .site-nav-icon {
+  float: left;
+  display: block;
+}
+.header .headerW .headerright .site-nav-arrow .site-nav-icon {
+  margin: -4px 20px 0 0;
+}
+.header .headerW .headerright .header-mytaobao-down {
+  display: none;
+  padding: 8px 0px 8px 0;
+  border: 1px solid #EEE;
+  background: #ffffff;
+  position: absolute;
+  margin-top: -1px;
+  z-index: 900;
+}
+.header .headerW .headerright .header-mytaobao-down li {
+  float: none;
+}
+.header .headerW .headerright .nav-down a {
+  padding: 0 5px 0 5px;
+  display: block;
+  line-height: 28px;
+  color: #6C6C6C;
+}
+.header .headerW .headerright .nav-down a:hover {
+  background: #f5f5f5;
+}
+.header .headerW .headerright .header-classes a {
+  margin-right: 7px;
+}
+.header .headerW .headerright .header-pipe {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 5px;
+  font-style: normal;
+  color: #ddd;
+}
+.header .headerW .headerright .header-map-down {
+  display: none;
+  border: 1px solid #EEE;
+  background: #ffffff;
+  position: absolute;
+  right: 0px;
+  margin-top: -1px;
+  z-index: 900;
+  width: 1188px;
+  min-height: 300px;
+}
+
+.header .headerW .headerright .header-map-li {
+  position: relative;
+}
+.header .headerW .headerright .header-map-li:hover .header-map-down {
+  display: block;
+}
+
+.map-list {
+  width: 25%;
+  float: left;
+}
+.map-list .map-list-wrap {
+  padding: 5px 5px 5px 5px;
+}
+.map-list .map-list-wrap .map-main li {
+  float: left;
+  padding-top: 5px;
+  width: 25%;
+  height: 25px;
+  overflow: hidden;
+}
+.map-list .map-list-wrap .map-main li a {
+  display: block;
+  padding: 0 8px 0 8px;
+  margin: 0 2px 0 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -ms-border-radius: 2px;
+  float: left;
+  line-height: 26px !important;
+}
+.map-list .map-list-wrap .map-main li a:hover {
+  color: #fff !important;
+  background-color: #f50 !important;
+}
+
+.page {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+/* 导航 */
+.nav {
+  height: 30px;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+.nav li {
+  height: 30px;
+  float: left;
+  text-align: center;
+  padding: 10px 16px;
+  line-height: 30px;
+}
+.nav li a {
+  color: #030303;
+  font-family: 微软雅黑;
+  font-size: 16px;
+}
+.nav li a:hover {
+  color: #EC7A5D;
+}
+
+/* 主体 */
+.content {
+  width: 990px;
+  height: 700px;
+  position: relative;
+}
+.content .small {
+  width: 418px;
+  height: 418px;
+  position: relative;
+  float: left;
+}
+.content .small img {
+  width: 100%;
+  height: 100%;
+}
+.content .small .mask {
+  position: absolute;
+  background: rgba(169, 255, 0, 0.5);
+  cursor: all-scroll;
+  visibility: hidden;
+}
+.content .big {
+  position: absolute;
+  left: 430px;
+  top: 0;
+  width: 418px;
+  height: 418px;
+  overflow: hidden;
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.content .big img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.content .wrap {
+  width: 410px;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  top: 430px;
+}
+.content .wrap ul {
+  width: 468px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+}
+.content .wrap ul li {
+  padding: 0 9px;
+  float: left;
+}
+.content .wrap ul img {
+  cursor: pointer;
+}
+.content .wrap ul .selected img {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #000;
+}
+.content .wrap .btn {
+  position: absolute;
+  height: 60px;
+  width: 15px;
+  text-align: center;
+  line-height: 60px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.content .wrap #btnleft {
+  left: 2px;
+}
+.content .wrap #btnright {
+  right: 0;
+}
+.content .detail {
+  width: 548px;
+  height: 100%;
+  float: left;
+  padding-left: 20px;
+}
+.content .detail .title {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+}
+.content .detail .juhuasuan {
+  width: 470px;
+  height: 40px;
+  background-color: #2da77a;
+  line-height: 40px;
+  padding-left: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+.content .detail .on-sale {
+  width: 520px;
+  height: 98px;
+  padding: 5px 0;
+  background: url(../img/detail-bg.png) no-repeat;
+  line-height: 98px;
+}
+.content .detail .on-sale p {
+  display: inline;
+  padding-left: 50px;
+}
+.content .detail .on-sale span {
+  padding-left: 50px;
+}
+.content .detail .on-sale span em {
+  color: #FF0036;
+  font-size: 18px;
+}
+.content .detail .on-sale span i {
+  color: #FF0036;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.content .detail .join-cart {
+  height: 500px;
+  background: url(../img/join-cart.png) no-repeat;
+  position: relative;
+}
+.content .detail .join-cart .buy {
+  width: 180px;
+  height: 38px;
+  background-color: #ff0036;
+  border: 1px solid #ff0036;
+  color: #fff;
+  position: absolute;
+  left: 267px;
+  top: 362px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.detail-bg {
+  width: 990px;
+  height: 1485px;
+  background: url(../img/detail-bg2.png) no-repeat;
+}
+
+/* 侧边栏 */
+.side {
+  position: fixed;
+  width: 35px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  background-color: #000;
+}
+.side .cart {
+  margin: 8px 3px;
+  width: 29px;
+  color: white;
+  position: absolute;
+  top: 150px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.side .cart:hover {
+  background-color: #ff0036;
+}
+
+/* 底部 */
+.footer {
+  position: relative;
+  margin: 60px auto 0;
+  padding: 7px 0 9px;
+  border-top: 1px solid #ddd;
+  width: 1200px;
+}
+.footer a {
+  display: inline;
+  float: left;
+  margin: 0 8px;
+  white-space: nowrap;
+  color: #6c6c6c;
+}
+.footer a:hover {
+  color: #f40;
+}
+.footer li {
+  float: left;
+}
+.footer .footmap {
+  height: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.footer p {
+  display: inline-block;
+  float: left;
+}
+.footer .foot-cooperate {
+  height: 20px;
+  margin-top: 10px;
+}
+.footer .foot-cooperate .last-li {
+  margin-left: 30px;
+  color: #9c9c9c;
+}
+.footer .foot-ft {
+  height: 20px;
+  margin-top: 10px;
+}
+.footer .foot-ft li {
+  color: #9c9c9c;
+  margin: 0 8px;
+}
+
+/*# sourceMappingURL=magnifying_glass.css.map */
