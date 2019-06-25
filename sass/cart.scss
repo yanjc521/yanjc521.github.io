@@ -1,0 +1,537 @@
+@charset "utf-8";
+@import "var";
+body{
+	background:white;
+}
+/* 头部 */
+.header{
+	background: #f5f5f5; 
+	width:$width;
+	height:$height;
+	z-index:999;
+	@include bd2(bottom,#eee);
+	.headerW{
+		@include mgat();
+		width:$w;
+		height: $height;
+		.headerleft{
+			@include f();
+			li{
+				@include f();
+			}
+			a{
+				line-height:$height;
+				font-size: 12px;
+				@include dis(inline-block);
+				@include m(0,7px);
+			}
+			.login{
+				color: map-get($color,fyan);
+			}
+			.ahov{
+				color: map-get($color,gray2);
+				&:hover{
+					color: map-get($color,hov);
+				}			
+			}
+			.phonet{
+				margin-left: 10px;
+			}
+		}
+		//@include css3(transition, 0.5s);  
+		//@include opacity(0.8);
+		.headerright{
+			@include f(right);
+			li{
+				@include f();
+				line-height:$height;
+				&:hover .header-mytaobao{
+					@include p(0px,5px,0px,5px);
+					@include bd2(right,#EEE);
+					@include bd2(left,#EEE);
+					background: map-get($color,white);
+				}
+				&:hover .header-mytaobao-down{
+					@include dis();
+				}
+				.header-mytaobao{
+					@include p(0px,6px,0px,6px);
+					height:$height;
+					z-index:999;
+					position:relative;	
+				}
+				.header-cart .site-nav-icon-highlight{
+					margin:0 5px;
+				}
+			}
+			.nav-up:hover a{
+				color: map-get($color,hov);
+			}
+			.nav-up:hover span{
+				color: map-get($color,hov);
+				cursor:pointer;
+			}
+			.nav-up a{
+				color: map-get($color,gray2);
+				font-size: $fsize - 2;
+				@include dis();
+				@include f();
+			}
+			.site-nav-icon{
+				@include f();
+				@include dis();
+			}
+			.site-nav-arrow .site-nav-icon{
+				@include m(-4px,20px);
+			}
+			.header-mytaobao-down{
+				@include dis(none);
+				@include p(8px,0px,8px);
+				@include bdr(#EEE);
+				background: map-get($color,white);
+				position:absolute;
+				margin-top:-1px;
+				z-index:900;
+				li{
+					float:none;
+				}			
+			}
+			.nav-down a{
+				@include p(0,5px,0,5px);
+				@include dis();
+				line-height:$height - 7;
+				color: map-get($color,gray5);
+				&:hover{
+					background: map-get($color,gray3);
+				}
+			}
+			.header-classes a{
+				margin-right:7px;
+			}
+			.header-pipe{
+				float: left;
+			    height: $height;
+			    line-height: $height;
+			    padding: 0 5px;
+			    font-style: normal;
+			    color: #ddd;
+			}
+			.header-map-down{
+				@include dis(none);
+				@include bdr(#EEE);
+				background: map-get($color,white);
+				position:absolute;
+				right: 0px;
+				margin-top:-1px;
+				z-index:900;
+				width: $w - 2;
+				min-height: 300px;
+			}
+		}
+
+	}
+}
+.header .headerW .headerright .header-map-li{
+	position:relative;
+	&:hover .header-map-down{
+		@include dis();
+	}
+}
+.map-list{
+	width: 25%;
+	@include f();
+	.map-list-wrap{
+		@include p(5px,5px,5px,5px);
+		.map-title{
+
+		}
+		.map-main li{
+			float: left;
+		    padding-top: 5px;
+		    width: 25%;
+		    height: 25px;
+		    overflow: hidden;
+		    a{
+		    	@include dis();
+		    	@include p(0,8px,0,8px);
+		    	@include m(0,2px,0,2px);
+		    	@include radius(1234,2px);
+		    	@include f();
+		    	line-height: 26px!important;
+		    	&:hover{
+		    		color: #fff!important;
+		    		background-color: #f50!important;
+		    	}
+		    }
+		}
+	}
+}
+
+/* 内容部分 */
+
+.page{
+	width:990px;
+	@include mgat();
+	.search{
+		padding: 20px 0 40px;
+	    position: relative;
+	    height: 35px;
+	    .logo{
+	    	width: 140px;
+    		height: 35px;
+    		@include f();
+    		span{
+    		    display: block;
+			    width: 181px;
+			    height: 45px;
+			    overflow: hidden;
+			    background:url(../img/cart-sprite.png) no-repeat -110px 0;
+    		}
+	    }
+	    .searchinput{
+	    	width: 509px;
+	    	height:29px;
+	    	border:3px solid #f50;
+	    	float:right;
+	    	position:relative;
+	    	.selectsearch{
+	    		height: 100%;
+	    		width:59px;
+	    		background: #f5f5f5;
+	    	    font-size: 12px;
+	    	    line-height:29px;
+	    	    padding-left:15px;
+	    	    color:#6b6b6b;
+	    	    @include f();
+	    	}
+	    	.searchicon{
+	    	    z-index: 2;
+			    position: absolute;
+			    top: 8px;
+			    left: 86px;
+			    width: 12px;
+			    height: 12px;
+			    background:url(../img/spirit2.png) no-repeat -380px -20px;
+	    	}
+	    	input{
+				@include f();
+				width: 343px;
+				height:27px;
+				border:none;
+				text-indent:50px;
+				outline:none;
+	    	}
+	    	button{
+	    		float:right;
+	    		border:none;
+	    		outline:none;
+	    		width: 91px;
+	    		height: 29px;
+	    		background:#ff4400;
+	    		color:white;
+	    		font-size: 18px;
+	    		font-weight: 500;
+	    		cursor:pointer;
+	    	}
+	    }
+	}
+
+	.cart-head{
+		width: 100%;
+		height:35px;
+		border-bottom:2px solid #e6e6e6;
+		ul{
+			height:35px;
+			width:360px;
+			float:left;
+			li{
+				width:33%;
+				padding-bottom:11px;
+				float:left;
+				a{
+					display:inline-block;
+					padding-left:15px;
+					color:#3c3c3c;
+					font-size: 16px;
+					font-weight: 600;
+				}
+				i{
+				    color: #f40;
+				    font-size: 14px;
+				    margin: 0 30px 0 5px;
+				    font-weight: 400;
+				}
+			}
+			.activeli{
+				border-bottom:2px solid #f40;
+				a{
+					color:#f40;
+				}
+			}
+		}
+		.cart-sum{
+			height: 25px;
+    		line-height: 25px;
+    		float:right;
+		}
+		strong{
+			font-weight: 700;
+			color: #f40;
+		}
+		button{
+			display:inline-block;
+			width: 55px;
+			height: 25px;
+			border:none;
+			outline:none;
+			cursor:not-allowed;
+			color:#fff;
+			background:#aaa;
+			@include radius(1234,2px);
+		}
+		.allow{
+		    background: #f40;
+		    cursor:pointer;
+		}
+	}
+
+	.cart-classify{
+		height: 50px;
+	    line-height: 50px;
+	    color: #3c3c3c;
+	    .quanxuan{
+	    	height:100%;
+	    	width:80px;
+	    	float:left;
+	    	line-height:50px;
+	    	cursor:pointer;
+	    	input{
+	    		cursor:pointer;
+	    	}
+	    	label{
+	    		cursor:pointer;
+	    	}
+	    }
+	    .colMsg{
+	    	float:left;
+	    	width:80px;
+	    	padding-left:50px;
+	    }
+	    .colRight{
+	    	float:right;
+	    	width: 80px;
+	    	padding-right:50px;
+	    	text-align:center;	
+	    }
+	}
+
+}
+
+.cart-body{
+	border: 1px solid #ccc;
+	width:100%;
+	min-height:100px;
+    background: #fcfcfc;
+    .item-content{
+    	width:100%;
+    	height:100%;
+    	li{
+    		float:left;
+    		height:120px;
+    	}
+    	.td-check{
+    		width:45px;
+    		input{
+    			margin-top:20px;
+    			margin-left:20px;
+    			cursor:pointer;
+    		}
+    	}
+    	.td-item{
+    		width: 302px;
+    		div{
+				padding-top:20px;
+				width: 302px;
+			}
+			img{
+				width: 80px;
+				height: 80px;
+		    	border: 1px solid #eee;
+				float: left;
+			}
+			a{
+				padding-left:5px;
+				font-size: 12px;
+			    display: block;
+			    max-height: 36px;
+			    overflow: hidden;
+			    color:#3c3c3c;
+			    &:hover{
+			        color: #f60;
+			        text-decoration: underline;
+			    }
+			}
+    	}
+    	.td-info{
+    		.infobox{
+    			width: 162px;
+	    		padding:20px 15px 0px 15px;
+	    		color:#3c3c3c;
+    		}
+    	}
+    	.td-price{
+    		width: 120px;
+    		.pricebox{
+    			padding-top:20px;
+				.singleprice{
+				    color: #3c3c3c;
+				    font-weight: 700;
+				    font-family: Verdana,Tahoma,arial;
+				}
+    		}
+    	}
+    	.td-num{
+    		width: 120px;
+    		.numbox{
+    			width: 79px;
+    			height:25px;
+    			padding-top:20px;
+    			a{
+    			    display: block;
+				    height: 23px;
+				    width: 17px;
+				    border: 1px solid #e5e5e5;
+				    background: #f0f0f0;
+				    text-align: center;
+				    line-height: 23px;
+				    float: left;
+					&:hover{
+					    color: #f50;
+					    border-color: #f60;
+					}
+    			}
+    			input{
+    			    width: 39px;
+					height: 15px;
+					line-height: 15px;
+					border: 1px solid #aaa;
+					color: #343434;
+					text-align: center;
+					padding: 4px 0;
+					background-color: #fff;
+					float:left;
+    			}
+    		}
+    	}
+    	.td-sum{
+    		width: 105px;
+    		.sumbox{
+    			padding-top:20px;
+    			strong{
+    			    color: #f40;
+    				font-weight: 700;
+    			}
+    		}
+    	}
+    	.td-del{
+    		width: 99px;
+    		.delbox{
+    			padding-top:20px;
+    			a{
+    				display:block;
+    				color:#3c3c3c;
+    				&:hover{
+    					color: #f40;
+			        	text-decoration: underline;
+    				}
+    			}
+    		}
+    	}
+    }
+}
+
+/* history */
+.history{
+	height:361px;
+	ul{
+		li{
+			float: left;
+		    width: 220px;
+		    overflow: hidden;
+		    border: 1px solid #ededed;
+		    margin: 0 30px 0 0;
+		    a{
+		    	display: block;
+			    height: 22px;
+			    white-space: nowrap;
+			    width: 200px;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    &:hover{
+			    	color:#f40;
+			    	text-decoration:underline;
+			    }
+		    }
+		    button{
+		    	width:80px;
+		    	height:20px;
+		    	border:none;
+		    	cursor:pointer;
+		    	outline:none;
+		    	background:#f40;
+		    	color:#fff;
+		    	@include radius(1234,5px);
+		    }
+		}
+		.lastli{
+			margin-right:0;
+		}
+	}
+}
+
+/* 底部 */
+.footer{
+	position: relative;
+    margin: 60px auto 0;
+    padding: 7px 0 9px;
+    border-top: 1px solid #ddd;
+    width: 1200px;
+    a{
+    	display: inline;
+	    float: left;
+	    margin: 0 8px;
+	    white-space: nowrap;
+	    color: #6c6c6c;
+    }
+    a:hover{
+		color: #f40;
+    }
+    li{
+    	@include f();
+    }
+    .footmap{
+    	height:20px;
+    	padding-bottom:20px;
+    	border-bottom: 1px solid #ddd;
+    }
+    p{
+    	display:inline-block;
+    	@include f();
+    }
+    .foot-cooperate{
+    	height:20px;
+    	margin-top:10px;
+    	.last-li{
+    	    margin-left: 30px;
+    	    color: #9c9c9c;
+    	}
+    }
+    .foot-ft{
+    	height:20px;
+    	margin-top:10px;
+    	li{
+    		color: #9c9c9c;
+    		margin: 0 8px;
+    	}
+    }
+}

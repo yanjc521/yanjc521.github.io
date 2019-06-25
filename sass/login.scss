@@ -1,0 +1,256 @@
+@charset "utf-8";
+@import "var";
+body{
+	background:white;
+}
+.header{
+	width:$w;
+	@include mgat();
+	padding-top:22px;
+	height:75px;
+	.logo{
+		display: block;
+	    float: left;
+	    width: 110px;
+	    height: 44px;
+	    h1{
+	    	display:block;
+	    	float:left;
+	    	.regiconfont{
+	    	    display: block;
+			    color: #ff4001;
+			    font-size: 36px;
+			    font-weight: 400;
+	    	}
+	    	.regicon1{
+	    	    position: relative;
+	    	}
+	    	.regicon2{
+	    		font-size: 50px;
+			    position: relative;
+			    top: -43px;
+	    	}
+	    }
+	}
+	.allmsg{
+		line-height: 16px;
+	    padding: 6px 10px;
+	    overflow: hidden;
+	    background: #fef2f2;
+	    border: 1px solid;
+	    border-color: #ffb4a8;
+	    background-color: #fef2f2;
+	    color: #6C6C6C;
+		text-align: center;
+	    width: 880px;
+	    @include mgat();
+	}
+	.suggset{
+		display:block;
+	    float: right;
+	    line-height: 44px;
+	    color: #666;
+	    font-size: 12px;
+	    .lgiconfont{
+	    	color: #f40;
+	    }
+	    &:hover{
+	        color: #f40;
+	    }
+	}
+}
+.content{
+	width:100%;
+	height:600px;
+	background:url(../img/lg-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .conbox{
+    	width:1200px;
+    	@include mgat();
+    }
+    .conleft a{
+    	display:block;
+    	@include f();
+		width:500px;
+		height:500px;
+		padding-top:50px;
+		padding-left:100px;
+    }
+    .conright{
+    	width: 350px;
+    	height: 350px;
+    	float:right;
+    	padding-top:120px;
+    	padding-right:60px;
+    	position:relative;
+    	.swaplogin{
+    		position:absolute;
+    	}
+    }
+}
+.loginbox{
+	padding:25px;
+	width: 300px;
+	height: 300px;
+	position:relative;
+	background-color:rgba(255,255,255,.9);
+	.wrongtips{
+		line-height: 16px;
+	    padding: 6px 10px;
+	    overflow: hidden;
+	    width: 278px;
+	    background-color: #fef2f2;
+	    color: #6C6C6C;
+	    border: 1px solid #ffb4a8;
+	    position:absolute;
+	    .lgiconfont{
+	    	color: #f40;
+    	    padding-right: 10px;
+		    float: left;
+		    font-size: 16px;
+	    }
+	}
+	.logintitle{
+	    height: 18px;
+	    line-height: 18px;
+	    font-size: 16px;
+	    color: #3c3c3c;
+	    margin-top: 9px;
+	    padding-bottom: 8px;
+	    font-weight: 700;
+	}
+	.formmsg{
+		margin-top: 20px;
+    	position: relative;
+    	label{
+    	    display: block;
+		    width: 40px;
+		    height: 40px;
+		    line-height: 40px;
+		    color: #fff;
+		    background: #ddd;
+		    text-align: center;
+		    position: absolute;
+		    left: 1px;
+		    top: 1px;
+		    outline: 0;
+    	}
+    	input{
+    		width: 240px;
+		    font-size: 14px;
+		    line-height: 18px;
+		    height: 18px;
+		    padding: 11px 8px 11px 50px;
+		    border: 1px solid #ddd;
+    	}
+    	span{
+    		font-size: 16px;
+		    position: absolute;
+		    right: 8px;
+		    top: 8px;
+		    z-index: 1000;
+		    cursor: pointer;
+		    .lgiconfont{
+		    	color:#6c6c6c;
+		    }
+    	}
+	}
+	.submit{
+		margin-top: 20px;
+		button{
+			width: 300px;
+		    height: 42px;
+		    border: 0;
+		    display: inline-block;
+		    overflow: hidden;
+		    vertical-align: middle;
+		    line-height: 42px;
+		    font-size: 16px;
+		    font-weight: 700;
+		    color: #fff;
+		    background: #f40;
+		    @include radius(1234,3px);
+		    cursor:pointer;
+		    &:hover{
+		    	background-color:#f52b00;
+		    }
+		}
+	}
+	.otherlogin{
+	    margin-top: 24px;
+    	line-height: 14px;
+    	a{
+    		display:inline-block;
+    		margin-right:24px;
+    	    color: #6c6c6c;
+    	}
+    	.weibo .lgiconfont{
+    		color:#e52425;
+    	}
+    	.zhifubao .lgiconfont{
+    	    color: #1ba9ee;
+    	}
+	}
+	.forgetAndReg{
+	    margin-top: 25px;
+	    overflow: hidden;
+	    text-align: right;
+	    a{
+	    	margin-right: 10px;
+	    	color: #6c6c6c;
+	    	&:hover{
+	    		color:#f40;
+	    	}
+	    }
+	}
+}
+
+
+/* 底部 */
+.footer{
+	position: relative;
+    margin: 60px auto 0;
+    padding: 7px 0 9px;
+    border-top: 1px solid #ddd;
+    width: 1200px;
+    a{
+    	display: inline;
+	    float: left;
+	    margin: 0 8px;
+	    white-space: nowrap;
+	    color: #6c6c6c;
+    }
+    a:hover{
+		color: #f40;
+    }
+    li{
+    	@include f();
+    }
+    .footmap{
+    	height:20px;
+    	padding-bottom:20px;
+    	border-bottom: 1px solid #ddd;
+    }
+    p{
+    	display:inline-block;
+    	@include f();
+    }
+    .foot-cooperate{
+    	height:20px;
+    	margin-top:10px;
+    	.last-li{
+    	    margin-left: 30px;
+    	    color: #9c9c9c;
+    	}
+    }
+    .foot-ft{
+    	height:20px;
+    	margin-top:10px;
+    	li{
+    		color: #9c9c9c;
+    		margin: 0 8px;
+    	}
+    }
+}
